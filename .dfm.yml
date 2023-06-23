@@ -4,14 +4,14 @@ prompt_for_commit_message: true
 mappings:
   - match: '.config/nvim/UltiSnips'
     link_as_dir: true
-  - match: ".*gpg-agent.conf.darwin"
+  - match: '.*gpg-agent.conf.darwin'
     dest: ~/.gnupg/gpg-agent.conf
     target_os:
-      - "Darwin"
-  - match: "Library"
+      - 'Darwin'
+  - match: 'Library'
     target_os:
-      - "Darwin"
-  - match: "README.md"
+      - 'Darwin'
+  - match: 'README.md'
     skip: true
 
 hooks:
@@ -38,15 +38,8 @@ modules:
     pull_only: true
     link: none
     location: ~/.oh-my-zsh
-  # Node version manager
-  - repo: https://github.com/nvm-sh/nvm
-    pull_only: true
-    link: none
-    location: ~/.nvm
-  - repository: git@github.com:chasinglogic/secrets.git
-    name: secrets
   # Multiple runtime version manager
-  - repo: https://github.com/asdf-vm/asdf.git 
+  - repo: https://github.com/asdf-vm/asdf.git
     link: none
     location: ~/.asdf
     pull_only: true
@@ -55,13 +48,3 @@ modules:
     link: none
     location: ~/.fzf
     pull_only: true
-  # Elixir Language Server
-  - repo: https://github.com/elixir-lsp/elixir-ls.git
-    link: none
-    location: ~/.elixir-ls
-    pull_only: true
-    hooks:
-      after_sync:
-        - "mix deps.get"
-        - "MIX_ENV=prod mix compile"
-        - "MIX_ENV=prod mix elixir_ls.release -o dist"
