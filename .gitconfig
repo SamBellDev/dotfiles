@@ -80,3 +80,6 @@
     pushInsteadOf = kde:
 [merge]
 	ff = only
+[author]
+	name = Sam Bell
+	email = sam.bell@tillo.io
