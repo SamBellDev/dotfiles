@@ -1,6 +1,6 @@
 [user]
-    email = mathew@chasinglogic.io
-    name = Mathew Robinson
+	email = sam.bell@tillo.io
+	name = Sam Bell
 
 [include]
     path = ~/.gitconfig_local
